@@ -26,7 +26,6 @@ while True:
         yy = y + int(h*0.5)
         cv2.line(frame, (xx, y), (xx, y+h), (0, 255, 0), 2)
         cv2.line(frame, (x, yy), (x+w, yy), (0, 255, 0), 2)
-        cv2.putText(frame, f'{x + (w // 2)}, {y + (h // 2)}', (10, 590), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0))
     frame[yy-32:yy+32, xx-32:xx+32] = cv2.imread('fly.png')
     cv2.imshow('frame', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
